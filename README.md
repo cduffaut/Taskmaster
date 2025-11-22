@@ -2,24 +2,13 @@
 ### cmd 1:
 ```bash
 docker-compose up -d
+docker exec -it taskmaster bash
 ```
 
 ### cmd 2:
 ```bash
-docker exec -it taskmaster bash
-```
-
-### cmd 3:
-```bash
 python3 -m venv ./venv
-```
-### cmd 4:
-```bash
 source ./venv/bin/activate
-```
-
-### cmd 5:
-```bash
 pip install -r ./requirements.txt
 ```
 
@@ -70,7 +59,7 @@ status
 
 ### cmd 3: (terminal 2)
 ```bash
-ps aux | grep "sleep 300"
+ps aux | grep "sleep 300" | grep -v grep
 ```
 
 ### cmd 4: (terminal 2) 
